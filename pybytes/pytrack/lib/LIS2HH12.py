@@ -125,12 +125,12 @@ class LIS2HH12:
         self.act_dur = duration
 
         if threshold > self.SCALES[self.full_scale]:
-            error = "threshold %d exceeds full scale %d" % (thresold, self.SCALES[self.full_scale])
+            error = "threshold %d exceeds full scale %d" % (threshold, self.SCALES[self.full_scale])
             print(error)
             raise ValueError(error)
 
         if threshold < self.SCALES[self.full_scale] / 128:
-            error = "threshold %d below resolution %d" % (thresold, self.SCALES[self.full_scale]/128)
+            error = "threshold %d below resolution %d" % (threshold, self.SCALES[self.full_scale]/128)
             print(error)
             raise ValueError(error)
 
